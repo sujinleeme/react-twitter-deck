@@ -1,0 +1,23 @@
+{
+  "name": "twitter-auth-server",
+  "version": "0.0.1",
+  "description": "Server for React - Node Twitter auth",
+  "main": "server.js",
+  "scripts": {
+    "format": "prettier --write 'client/src/**/*.js' 'server/*.js'",
+    "dev": "cd server && yarn dev",
+    "start": "cd server && yarn start",
+    "heroku-postbuild": "cd server && yarn install && cd ../client && yarn install && yarn build"
+  },
+  "engines": {
+    "node": "^12.11.1",
+    "yarn": "^1.19.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "use-reducer-logger": "^1.0.1"
+  }
+}

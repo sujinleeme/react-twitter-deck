@@ -58,11 +58,9 @@ export default function TwitterAuth() {
         localStorage.setItem('user', JSON.stringify(user))
         dispatch(logInTwitter(user, true))
         dispatch(closePopup())
-        return (() => {
-          fetchTimeLines('user')
-          fetchTimeLines('home')
-          fetchTimeLines('like')
-        })
+        fetchTimeLines('user')
+        fetchTimeLines('home')
+        fetchTimeLines('like')
       })
 
       socket.on('disconnect', () => {
